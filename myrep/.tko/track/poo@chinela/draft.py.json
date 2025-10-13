@@ -132,8 +132,28 @@
         },
         {
             "label": "2025-10-09_12-26-04",
-            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho: int = 0\n\n    def getTamanho(self):\n        return self.__tamanho\n\n    def setTamanho(self, novo_tamanho):\n        if not isinstance(novo_tamanho, int):\n            print(f\"ERRO: '{novo_tamanho}' n\u00e3o \u00e9 um n\u00famero inteiro v\u00e1lido.\")\n            return False\n\n        if not (20 <= novo_tamanho <= 50):\n            print(f\"ERRO: O tamanho {novo_tamanho} est\u00e1 fora do intervalo permitido. Deve ser entre 20 e 50.\")\n            return False\n        \n        if novo_tamanho % 2 != 0:\n            print(f\"ERRO: O tamanho {novo_tamanho} n\u00e3o \u00e9 um n\u00famero par. O tamanho da chinela deve ser par.\")\n            return False\n\n        self.__tamanho = novo_tamanho\n        return True\n\nchinela = Chinela()\nprint(\"--- Validador de Tamanho de Chinela ---\")\nprint(\"Regra: Tamanho deve ser um n\u00famero PAR entre 20 e 50.\\n\")\n\nwhile chinela.getTamanho() == 0:\n    try:\n        entrada = input(\"Digite seu tamanho de chinela: \")\n        tamanho = int(entrada)\n        \n        if chinela.setTamanho(tamanho):\n            print(f\"\\nSUCESSO! Voc\u00ea comprou uma chinela tamanho {chinela.getTamanho()}.\")\n\n    except ValueError:\n        print(f\"ERRO: A entrada '{entrada}' n\u00e3o \u00e9 um valor num\u00e9rico v\u00e1lido. Tente novamente.\")",
+            "content": "@@ -890,24 +890,33 @@\n nho() == 0:%0A\n+    try:%0A\n         entr\n@@ -1128,12 +1128,130 @@\n manho()%7D.%22)%0A\n+%0A    except ValueError:%0A        print(f%22ERRO: A entrada '%7Bentrada%7D' n%C3%A3o %C3%A9 um valor num%C3%A9rico v%C3%A1lido. Tente novamente.%22)\n",
             "lines": "37"
+        },
+        {
+            "label": "2025-10-10_16-03-36",
+            "content": "@@ -898,16 +898,149 @@\n  0:%0A    \n+    entrada = input(%22Digite seu tamanho de chinela: %22)%0A        tamanho = int(entrada)%0A        %0A        if chinela.setTamanho(tamanho)\n :%0A      \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-10-10_16-03-59",
+            "content": "@@ -894,24 +894,25 @@\n ) == 0:%0A    \n+:\n %0A           \n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-10-10_16-04-11",
+            "content": "@@ -902,142 +902,8 @@\n     \n-    entrada = input(%22Digite seu tamanho de chinela: %22)%0A        tamanho = int(entrada)%0A        %0A        if chinela.setTamanho(tamanho):\n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-10-10_16-04-30",
+            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho: int = 0\n\n    def getTamanho(self):\n        return self.__tamanho\n\n    def setTamanho(self, novo_tamanho):\n        if not isinstance(novo_tamanho, int):\n            print(f\"ERRO: '{novo_tamanho}' n\u00e3o \u00e9 um n\u00famero inteiro v\u00e1lido.\")\n            return False\n\n        if not (20 <= novo_tamanho <= 50):\n            print(f\"ERRO: O tamanho {novo_tamanho} est\u00e1 fora do intervalo permitido. Deve ser entre 20 e 50.\")\n            return False\n        \n        if novo_tamanho % 2 != 0:\n            print(f\"ERRO: O tamanho {novo_tamanho} n\u00e3o \u00e9 um n\u00famero par. O tamanho da chinela deve ser par.\")\n            return False\n\n        self.__tamanho = novo_tamanho\n        return True\n\nchinela = Chinela()\nprint(\"--- Validador de Tamanho de Chinela ---\")\nprint(\"Regra: Tamanho deve ser um n\u00famero PAR entre 20 e 50.\\n\")\n\nwhile chinela.getTamanho() == 0:\n        entrada = input(\"Digite seu tamanho de chinela: \")\n        tamanho = int(entrada)\n        \n        if chinela.setTamanho(tamanho):\n            print(f\"\\nSUCESSO! Voc\u00ea comprou uma chinela tamanho {chinela.getTamanho()}.\")\n",
+            "lines": "33"
         }
     ]
 }

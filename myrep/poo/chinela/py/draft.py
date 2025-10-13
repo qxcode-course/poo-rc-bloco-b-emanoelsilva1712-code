@@ -26,12 +26,8 @@ print("--- Validador de Tamanho de Chinela ---")
 print("Regra: Tamanho deve ser um número PAR entre 20 e 50.\n")
 
 while chinela.getTamanho() == 0:
-    try:
         entrada = input("Digite seu tamanho de chinela: ")
         tamanho = int(entrada)
         
         if chinela.setTamanho(tamanho):
             print(f"\nSUCESSO! Você comprou uma chinela tamanho {chinela.getTamanho()}.")
-
-    except ValueError:
-        print(f"ERRO: A entrada '{entrada}' não é um valor numérico válido. Tente novamente.")

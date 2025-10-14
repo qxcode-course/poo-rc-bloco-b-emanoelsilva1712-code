@@ -2,8 +2,68 @@
     "patches": [
         {
             "label": "2025-10-13_02-22-17",
-            "content": "",
+            "content": "@@ -1,560 +0,0 @@\n-class Camisa:%0A    def __int__(self):%0A        self.__tamanho = 0%0A%0A    def getTamanho(self) -%3E str:%0A        return self.__tamanho%0A%0A    def setTamanho(self, valor: str):%0A%0A        if valor == %22PP%22, %22P%22, %22M%22, %22G%22, %22GG%22, %22XG%22:%0A            retrun valor%0A        else:%0A            print(fail: Digite o tamanho da Camisa entre PP, P, M, G, GG, XG)%0A%0A%0ACamisa = roupa(): %0Awhile roupa.getTamanho() == %22 %22:%0A%0A    print(%22Digite seu tamanho de roupa%22)%0A    tamanho = input()%0A    roupa.setTamanho(tamanho)%0A%0Aprint(f%22Parabens, voce comprou uma roupa %7Btamanho%7D%22, roupa.getTamanho())%0A\n",
             "lines": "0"
+        },
+        {
+            "label": "2025-10-14_00-06-52",
+            "content": "@@ -185,16 +185,17 @@\n  == %22PP%22\n+,\n  %22P%22, %22M\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-07-04",
+            "content": "@@ -193,21 +193,25 @@\n  %22P%22\n+,\n  %22M%22\n+,\n  %22G%22\n+,\n  %22GG%22\n+,\n  %22XG\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-07-17",
+            "content": "@@ -228,21 +228,16 @@\n  retrun \n-self.\n valor%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-07-32",
+            "content": "@@ -232,15 +232,18 @@\n run \n-%22\n+self.\n valor\n-%22\n %0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-07-48",
+            "content": "@@ -228,21 +228,23 @@\n  retrun \n+%22\n valor\n+%22\n %0A       \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-08-38",
+            "content": "@@ -228,30 +228,21 @@\n  retrun \n-self.__tamanho\n+valor\n %0A       \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-09-03",
+            "content": "@@ -232,12 +232,22 @@\n run \n-True\n+self.__tamanho\n %0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-10-03",
+            "content": "@@ -228,16 +228,20 @@\n  retrun \n+True\n %0A       \n@@ -265,17 +265,16 @@\n   print(\n-%22\n fail: Di\n@@ -323,17 +323,16 @@\n , GG, XG\n-%22\n )%0A%0A%0ACami\n@@ -546,8 +546,9 @@\n manho())\n+%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-15-36",
+            "content": "@@ -228,21 +228,16 @@\n  retrun \n-valor\n %0A       \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-15-50",
+            "content": "@@ -227,16 +227,22 @@\n   retrun\n+ valor\n %0A       \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-15-57",
+            "content": "@@ -340,16 +340,18 @@\n  roupa()\n+: \n %0Awhile r\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-14_00-16-16",
+            "content": "class Camisa:\n    def __int__(self):\n        self.__tamanho = 0\n\n    def getTamanho(self) -> str:\n        return self.__tamanho\n\n    def setTamanho(self, valor: str):\n\n        if valor == \"PP\" \"P\" \"M\" \"G\" \"GG\" \"XG\":\n            retrun\n        else:\n            print(\"fail: Digite o tamanho da Camisa entre PP, P, M, G, GG, XG\")\n\n\nCamisa = roupa()\nwhile roupa.getTamanho() == \" \":\n\n    print(\"Digite seu tamanho de roupa\")\n    tamanho = input()\n    roupa.setTamanho(tamanho)\n\nprint(f\"Parabens, voce comprou uma roupa {tamanho}\", roupa.getTamanho())",
+            "lines": "23"
         }
     ]
 }

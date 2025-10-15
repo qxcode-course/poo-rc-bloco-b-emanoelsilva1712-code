@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-14_14-00-47",
+            "content": "@@ -1,585 +0,0 @@\n-Class Notebook:%0A%09%0A%09def __init__(self):%0A%09%09self.__ligado: bool = false%0A%09%09self.__bateria: Bateria %7C None = none%0A%0A%09def __str__(self):%0A%09%09return f%22ligar %7Bself.__ligado%7D bateria %7Bself.__bateria%7D%22%0A%0A%09def ligar(self):%0A%09%09if self.__ligado:%0A%09%09%09print(%22Notebook ligado%22)%0A%09%09else:%0A%09%09%09print(%22Notebook desligado%22)%0A%0A%09def usar(self, tempo: int):%0A%09%09if tempo %3E self.__bateria:%0A%09%09%09print(f%22usado por %7Bself.__bateria%7D minutos%22)%0A%09%09%09return%0A%0A%0AClass Bateria%0A    def __int__(self, capacidade):%0A        self.__capacidade: int = capacidade%0A        self.__carga: int = capacidade%0A%0A    def __str__(self) -%3E str:%0A        \n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-10-14_17-09-35",
+            "content": "Class Notebook:\n\t\n\tdef __init__(self):\n\t\tself.__ligado: bool = false\n\t\tself.__bateria: Bateria | None = none\n\n\tdef __str__(self):\n\t\treturn f\"ligar {self.__ligado} bateria {self.__bateria}\"\n\n\tdef ligar(self):\n\t\tif self.__ligado:\n\t\t\tprint(\"Notebook ligado\")\n\t\telse:\n\t\t\tprint(\"Notebook desligado\")\n\n\tdef usar(self, tempo: int):\n\t\tif tempo > self.__bateria:\n\t\t\tprint(f\"usado por {self.__bateria} minutos\")\n\t\t\treturn\n\n\nClass Bateria\n    def __int__(self, capacidade):\n        self.__capacidade: int = capacidade\n        self.__carga: int = capacidade\n\n    def __str__(self) -> str:\n        ",
+            "lines": "28"
+        }
+    ]
+}

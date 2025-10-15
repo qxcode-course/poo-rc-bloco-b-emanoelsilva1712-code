@@ -62,8 +62,58 @@
         },
         {
             "label": "2025-10-14_00-16-16",
-            "content": "class Camisa:\n    def __int__(self):\n        self.__tamanho = 0\n\n    def getTamanho(self) -> str:\n        return self.__tamanho\n\n    def setTamanho(self, valor: str):\n\n        if valor == \"PP\" \"P\" \"M\" \"G\" \"GG\" \"XG\":\n            retrun\n        else:\n            print(\"fail: Digite o tamanho da Camisa entre PP, P, M, G, GG, XG\")\n\n\nCamisa = roupa()\nwhile roupa.getTamanho() == \" \":\n\n    print(\"Digite seu tamanho de roupa\")\n    tamanho = input()\n    roupa.setTamanho(tamanho)\n\nprint(f\"Parabens, voce comprou uma roupa {tamanho}\", roupa.getTamanho())",
+            "content": "@@ -147,19 +147,21 @@\n o(self, \n-tam\n+valor\n : str):%0A\n@@ -176,110 +176,63 @@\n  if \n-tam\n+valor \n ==\n+ \n %22PP%22 \n-or tam==%22P%22 or tam==%22M%22 or tam==%22G%22 or tam==%22GG%22 or tam=%22XG%22:%0A            self.__tamanho=tam\n+%22P%22 %22M%22 %22G%22 %22GG%22 %22XG%22:%0A            retrun\n %0A   \n@@ -236,22 +236,21 @@\n         \n-return\n+else:\n %0A       \n@@ -265,133 +265,177 @@\n nt(%22\n-tamanho valido%22)%0A%0A    def set_tamanho(self):%0A        return felf.__tamanho%0A%0Adef main():%0Acamisa = Camisa()%0Awhile True:%0A%0A    n=\n+fail: Digite o tamanho da Camisa entre PP, P, M, G, GG, XG%22)%0A%0A%0ACamisa = roupa()%0Awhile roupa.getTamanho() == %22 %22:%0A%0A    print(%22Digite seu tamanho de roupa%22)%0A    tamanho = \n inpu\n@@ -442,21 +442,20 @@\n t()%0A    \n-camis\n+roup\n a.setTam\n@@ -463,77 +463,86 @@\n nho(\n-n)%0A    if camisa.getTamanho() != %22 %22:%0A        break%0A%0Aprint(camisa)%0Amain\n+tamanho)%0A%0Aprint(f%22Parabens, voce comprou uma roupa %7Btamanho%7D%22, roupa.getTamanho\n ()\n+)\n",
             "lines": "23"
+        },
+        {
+            "label": "2025-10-14_13-23-45",
+            "content": "@@ -236,17 +236,16 @@\n  or tam=\n-=\n %22XG%22:%0A  \n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-14_13-23-57",
+            "content": "@@ -320,12 +320,10 @@\n nho \n-inv%C3%A1\n+va\n lido\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-14_13-25-00",
+            "content": "@@ -265,10 +265,8 @@\n lf._\n--_\n _tam\n@@ -289,16 +289,24 @@\n  return%0A\n+        \n     prin\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-14_13-26-49",
+            "content": "@@ -261,16 +261,17 @@\n   self._\n+-\n __tamanh\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-14_13-27-07",
+            "content": "@@ -391,20 +391,16 @@\n main():%0A\n-    \n camisa =\n@@ -409,20 +409,16 @@\n amisa()%0A\n-    \n while Tr\n@@ -420,25 +420,16 @@\n le True:\n-%0A        \n %0A%0A    n=\n@@ -511,20 +511,16 @@\n  break%0A%0A\n-    \n print(ca\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-14_13-28-04",
+            "content": "@@ -429,16 +429,26 @@\n e True:%0A\n+        %0A%0A\n     n=in\n@@ -507,17 +507,19 @@\n nho() !=\n-%22\n+ %22 \n %22:%0A     \n@@ -527,16 +527,17 @@\n   break%0A\n+%0A\n     prin\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-14_13-28-55",
+            "content": "@@ -429,20 +429,16 @@\n e True:%0A\n-    \n     n=in\n@@ -443,20 +443,16 @@\n input()%0A\n-    \n     cami\n@@ -468,20 +468,16 @@\n anho(n)%0A\n-    \n     if c\n@@ -501,20 +501,16 @@\n ) !=%22%22:%0A\n-    \n         \n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-10-14_13-29-32",
+            "content": "@@ -439,17 +439,16 @@\n       n=\n- \n input()%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-10-14_13-30-13",
+            "content": "@@ -466,17 +466,16 @@\n misa.set\n-_\n Tamanho(\n@@ -498,17 +498,16 @@\n misa.get\n-_\n Tamanho(\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-10-14_13-30-52",
+            "content": "class Camisa:\n    def __int__(self):\n        self.__tamanho = 0\n\n    def getTamanho(self) -> str:\n        return self.__tamanho\n\n    def setTamanho(self, tam: str):\n\n        if tam==\"PP\" or tam==\"P\" or tam==\"M\" or tam==\"G\" or tam==\"GG\" or tam==\"XG\":\n            self.___tamanho=tam\n        return\n    print(\"tamanho inv\u00e1lido\")\n\n    def set_tamanho(self):\n        return felf.__tamanho\n\ndef main():\n    camisa = Camisa()\n    while True:\n        n= input()\n        camisa.set_Tamanho(n)\n        if camisa.get_Tamanho() !=\"\":\n            break\n    print(camisa)\nmain()",
+            "lines": "26"
         }
     ]
 }

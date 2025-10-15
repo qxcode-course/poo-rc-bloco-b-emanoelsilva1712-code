@@ -5,19 +5,22 @@ class Camisa:
     def getTamanho(self) -> str:
         return self.__tamanho
 
-    def setTamanho(self, valor: str):
+    def setTamanho(self, tam: str):
 
-        if valor == "PP" "P" "M" "G" "GG" "XG":
-            retrun
-        else:
-            print("fail: Digite o tamanho da Camisa entre PP, P, M, G, GG, XG")
+        if tam=="PP" or tam=="P" or tam=="M" or tam=="G" or tam=="GG" or tam=="XG":
+            self.___tamanho=tam
+        return
+    print("tamanho inválido")
 
+    def set_tamanho(self):
+        return felf.__tamanho
 
-Camisa = roupa()
-while roupa.getTamanho() == " ":
-
-    print("Digite seu tamanho de roupa")
-    tamanho = input()
-    roupa.setTamanho(tamanho)
-
-print(f"Parabens, voce comprou uma roupa {tamanho}", roupa.getTamanho())
+def main():
+    camisa = Camisa()
+    while True:
+        n= input()
+        camisa.set_Tamanho(n)
+        if camisa.get_Tamanho() !="":
+            break
+    print(camisa)
+main()

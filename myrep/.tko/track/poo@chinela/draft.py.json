@@ -152,8 +152,58 @@
         },
         {
             "label": "2025-10-10_16-04-30",
-            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho: int = 0\n\n    def getTamanho(self):\n        return self.__tamanho\n\n    def setTamanho(self, novo_tamanho):\n        if not isinstance(novo_tamanho, int):\n            print(f\"ERRO: '{novo_tamanho}' n\u00e3o \u00e9 um n\u00famero inteiro v\u00e1lido.\")\n            return False\n\n        if not (20 <= novo_tamanho <= 50):\n            print(f\"ERRO: O tamanho {novo_tamanho} est\u00e1 fora do intervalo permitido. Deve ser entre 20 e 50.\")\n            return False\n        \n        if novo_tamanho % 2 != 0:\n            print(f\"ERRO: O tamanho {novo_tamanho} n\u00e3o \u00e9 um n\u00famero par. O tamanho da chinela deve ser par.\")\n            return False\n\n        self.__tamanho = novo_tamanho\n        return True\n\nchinela = Chinela()\nprint(\"--- Validador de Tamanho de Chinela ---\")\nprint(\"Regra: Tamanho deve ser um n\u00famero PAR entre 20 e 50.\\n\")\n\nwhile chinela.getTamanho() == 0:\n        entrada = input(\"Digite seu tamanho de chinela: \")\n        tamanho = int(entrada)\n        \n        if chinela.setTamanho(tamanho):\n            print(f\"\\nSUCESSO! Voc\u00ea comprou uma chinela tamanho {chinela.getTamanho()}.\")\n",
+            "content": "@@ -1,9 +1,8 @@\n-%0A\n class Ch\n@@ -56,15 +56,18 @@\n aman\n+h\n o: int\n-=\n+ = \n 0%0A%0A \n@@ -77,26 +77,24 @@\n def \n-__str__\n+getTamanho\n (self)\n--%3Estr\n :%0A  \n@@ -110,34 +110,8 @@\n urn \n-f%22sua chinela %C3%A9 tamanho: %7B\n self\n@@ -124,10 +124,8 @@\n anho\n-%7D%22\n %0A%0A  \n@@ -133,18 +133,17 @@\n  def set\n-_t\n+T\n amanho(s\n@@ -151,12 +151,63 @@\n lf, \n-tam:\n+novo_tamanho):%0A        if not isinstance(novo_tamanho, \n int)\n@@ -220,71 +220,256 @@\n     \n-if tam%3E=20 and tam%3C=50 and tam%252==0:%0A            self.__tamanho\n+    print(f%22ERRO: '%7Bnovo_tamanho%7D' n%C3%A3o %C3%A9 um n%C3%BAmero inteiro v%C3%A1lido.%22)%0A            return False%0A%0A        if not (20 %3C= novo_tamanho %3C= 50):%0A            print(f%22ERRO: O tamanho %7Bnovo_tamanho%7D est%C3%A1 fora do intervalo permitido. Deve ser entre 20 e 50.%22)\n %0A   \n@@ -483,16 +483,22 @@\n   return\n+ False\n %0A       \n@@ -502,117 +502,247 @@\n     \n-print(%22tamanho invalido%22)%0A%0A    def get_tamanho(self):%0A        return self.__tamanho%0A%0Adef main():%0A    \n+%0A        if novo_tamanho %25 2 != 0:%0A            print(f%22ERRO: O tamanho %7Bnovo_tamanho%7D n%C3%A3o %C3%A9 um n%C3%BAmero par. O tamanho da chinela deve ser par.%22)%0A            return False%0A%0A        self.__tamanho = novo_tamanho%0A        return True%0A%0A\n chinela\n-=\n+ = \n Chin\n@@ -751,78 +751,254 @@\n a()%0A\n-    while True:%0A        n=int(input())%0A        chinela.set_tamanho(n\n+print(%22--- Validador de Tamanho de Chinela ---%22)%0Aprint(%22Regra: Tamanho deve ser um n%C3%BAmero PAR entre 20 e 50.%5Cn%22)%0A%0Awhile chinela.getTamanho() == 0:%0A        entrada = input(%22Digite seu tamanho de chinela: %22)%0A        tamanho = int(entrada\n )%0A\n+        %0A\n     \n@@ -1016,24 +1016,27 @@\n ela.\n-get_\n+setTamanho(\n tamanho\n-()!=0\n+)\n :%0A  \n@@ -1049,36 +1049,82 @@\n     \n-break%0A    print(chinela)%0A%0Amain()\n+print(f%22%5CnSUCESSO! Voc%C3%AA comprou uma chinela tamanho %7Bchinela.getTamanho()%7D.%22)%0A\n",
             "lines": "33"
+        },
+        {
+            "label": "2025-10-15_11-45-05",
+            "content": "@@ -434,15 +434,20 @@\n   n=\n+int(\n input()\n+)\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-15_11-46-13",
+            "content": "@@ -432,17 +432,21 @@\n     n=in\n-t\n+put()\n %0A       \n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-15_11-46-29",
+            "content": "@@ -204,12 +204,10 @@\n  tam\n- \n %3E=\n- \n 20 a\n@@ -216,12 +216,10 @@\n  tam\n- \n %3C=\n- \n 50 a\n@@ -420,16 +420,30 @@\n e True:%0A\n+        n=int%0A\n         \n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-15_11-50-30",
+            "content": "@@ -428,31 +428,8 @@\n ue:%0A\n-        n=int(input())%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-10-15_11-51-24",
+            "content": "@@ -53,17 +53,16 @@\n .__taman\n-h\n o: int=0\n@@ -116,9 +116,10 @@\n sua \n-x\n+ch\n inel\n@@ -204,10 +204,12 @@\n  tam\n+ \n %3E=\n+ \n 20 a\n@@ -218,10 +218,12 @@\n  tam\n+ \n %3C=\n+ \n 50 a\n@@ -265,12 +265,8 @@\n anho\n-=tam\n %0A   \n@@ -547,17 +547,15 @@\n int(\n-%22\n chinela\n-%22\n )%0A%0Am\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-15_12-17-54",
+            "content": "@@ -1,8 +1,9 @@\n+%0A\n class Ch\n@@ -555,15 +555,14 @@\n nela%22)%0A%0A\n-%0A\n main()\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-15_12-19-12",
+            "content": "@@ -112,18 +112,17 @@\n n f%22sua \n-ch\n+x\n inela %C3%A9 \n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-15_14-02-59",
+            "content": "@@ -67,73 +67,8 @@\n =0%0A%0A\n-    def get_tamanho(self) -%3E int:%0A        return self.__tamanho%0A%0A\n     \n@@ -91,16 +91,16 @@\n )-%3Estr:%0A\n+\n         \n@@ -188,16 +188,8 @@\n int)\n- -%3E None\n :%0A  \n@@ -320,16 +320,68 @@\n %22)%0A%0A    \n+def get_tamanho(self):%0A        return self.__tamanho\n %0A%0Adef ma\n@@ -408,16 +408,16 @@\n inela()%0A\n-\n     whil\n@@ -418,16 +418,20 @@\n   while \n+True\n :%0A      \n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-15_18-16-46",
+            "content": "@@ -389,16 +389,22 @@\n lido%22)%0A%0A\n+    %0A%0A\n def main\n@@ -443,12 +443,8 @@\n ile \n-True\n :%0A  \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-15_18-17-53",
+            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho: int=0\n\n    def get_tamanho(self) -> int:\n        return self.__tamanho\n\n    def __str__(self)->str:\n        return f\"sua chinela \u00e9 tamanho: {self.__tamanho}\"\n\n    def set_tamanho(self, tam:int) -> None:\n        if tam>=20 and tam<=50 and tam%2==0:\n            self.__tamanho=tam\n            return\n        print(\"tamanho invalido\")\n\ndef main():\n    chinela=Chinela()\n    while True:\n        n=int(input())\n        chinela.set_tamanho(n)\n        if chinela.get_tamanho()!=0:\n            break\n    print(\"chinela\")\n\n\nmain()",
+            "lines": "27"
         }
     ]
 }

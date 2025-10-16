@@ -1,26 +1,25 @@
 class Camisa:
-    def __int__(self):
-        self.__tamanho = 0
+    def _init_(self):
+        self.__tamanho: str = ""
 
     def getTamanho(self) -> str:
         return self.__tamanho
 
-    def setTamanho(self, tam: str):
+    def setTamanho(self, valor: str):
+        tam_valido = ["PP", "P", "M", "G", "GG", "XG"]
 
-        if tam=="PP" or tam=="P" or tam=="M" or tam=="G" or tam=="GG" or tam=="XG":
-            self.___tamanho=tam
-        return
-    print("tamanho inválido")
-
-    def set_tamanho(self):
-        return felf.__tamanho
+        if valor in tam_valido:
+            self.__tamanho = valor
+        else:
+            print(f"Erro: tamanho inválido")
 
 def main():
     camisa = Camisa()
-    while True:
-        n= input()
-        camisa.set_Tamanho(n)
-        if camisa.get_Tamanho() !="":
-            break
-    print(camisa)
+
+    while camisa.getTamanho() == "":
+        tamanho = input()
+        camisa.setTamanho(tamanho)
+
+    print(f"Parabens! Você comprou uma camisa tamanho {camisa.getTamanho()}.")
+
 main()

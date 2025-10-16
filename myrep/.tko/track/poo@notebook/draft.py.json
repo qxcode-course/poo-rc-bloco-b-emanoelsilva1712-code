@@ -7,8 +7,13 @@
         },
         {
             "label": "2025-10-14_17-09-35",
-            "content": "Class Notebook:\n\t\n\tdef __init__(self):\n\t\tself.__ligado: bool = false\n\t\tself.__bateria: Bateria | None = none\n\n\tdef __str__(self):\n\t\treturn f\"ligar {self.__ligado} bateria {self.__bateria}\"\n\n\tdef ligar(self):\n\t\tif self.__ligado:\n\t\t\tprint(\"Notebook ligado\")\n\t\telse:\n\t\t\tprint(\"Notebook desligado\")\n\n\tdef usar(self, tempo: int):\n\t\tif tempo > self.__bateria:\n\t\t\tprint(f\"usado por {self.__bateria} minutos\")\n\t\t\treturn\n\n\nClass Bateria\n    def __int__(self, capacidade):\n        self.__capacidade: int = capacidade\n        self.__carga: int = capacidade\n\n    def __str__(self) -> str:\n        ",
+            "content": "@@ -9,16 +9,18 @@\n tebook:%0A\n+%09%0A\n %09def __i\n@@ -105,54 +105,8 @@\n none\n-%0A%09%09self.__carregador: Carregador %7C None = none\n %0A%0A%09d\n@@ -182,17 +182,16 @@\n teria%7D%22%0A\n-%09\n %0A%09def li\n@@ -410,29 +410,8 @@\n rn%0A%0A\n-%09def mostrar(self):%0A%0A\n %0ACla\n@@ -420,17 +420,16 @@\n  Bateria\n-:\n %0A    def\n@@ -425,33 +425,32 @@\n ria%0A    def __in\n-i\n t__(self, capaci\n@@ -544,330 +544,42 @@\n de%0A%0A\n-%09def mostrar(self):%0A%09%09print(f%22Bateria: %7Bself.carga%7D %7Bself.__capacidade%22)%0A%0A    def __str__(self) -%3E str:%0A%09%09return f%22Bateria: %7Bself.carga%7D %7Bself.__capacidade%7D%22%0A%0AClass Carregador:%0A%09def __init__(self, potencia: int):%0A%09%09self.__potencia: int = potencia%0A%0A%09def mostrar(self):%0A        print(f%22Carregador: (Pot%C3%AAncia %7Bself.__potencia%7D)%22)\n+    def __str__(self) -%3E str:%0A        \n",
             "lines": "28"
+        },
+        {
+            "label": "2025-10-15_14-02-29",
+            "content": "Class Notebook:\n\tdef __init__(self):\n\t\tself.__ligado: bool = false\n\t\tself.__bateria: Bateria | None = none\n\t\tself.__carregador: Carregador | None = none\n\n\tdef __str__(self):\n\t\treturn f\"ligar {self.__ligado} bateria {self.__bateria}\"\n\t\n\tdef ligar(self):\n\t\tif self.__ligado:\n\t\t\tprint(\"Notebook ligado\")\n\t\telse:\n\t\t\tprint(\"Notebook desligado\")\n\n\tdef usar(self, tempo: int):\n\t\tif tempo > self.__bateria:\n\t\t\tprint(f\"usado por {self.__bateria} minutos\")\n\t\t\treturn\n\n\tdef mostrar(self):\n\n\nClass Bateria:\n    def __init__(self, capacidade):\n        self.__capacidade: int = capacidade\n        self.__carga: int = capacidade\n\n\tdef mostrar(self):\n\t\tprint(f\"Bateria: {self.carga} {self.__capacidade\")\n\n    def __str__(self) -> str:\n\t\treturn f\"Bateria: {self.carga} {self.__capacidade}\"\n\nClass Carregador:\n\tdef __init__(self, potencia: int):\n\t\tself.__potencia: int = potencia\n\n\tdef mostrar(self):\n        print(f\"Carregador: (Pot\u00eancia {self.__potencia})\")",
+            "lines": "40"
         }
     ]
 }

@@ -42,6 +42,9 @@ Este é um projeto de modelagem e implementação de uma motoca motorizada em um
   - Crie os métodos `getAge()` e `getName()` para retornar a idade e o nome da pessoa, respectivamente.
   - Crie o método `toString()` para retornar uma string no formato "nome:idade".
 - Parte 1: Inserir
+
+
+
   - Crie a classe `Motoca` com os atributos `potencia`, `time` e `pessoa`.
   - Inicialize os atributos no construtor, onde `potencia` inicia com 1, `time` inicia com 0 e `pessoa` inicia como nulo.
   - Crie o método `inserir(pessoa: Pessoa): bool` que permite inserir uma pessoa na motoca.

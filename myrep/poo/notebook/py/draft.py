@@ -1,4 +1,4 @@
-Class Notebook:
+class Notebook:
 	def __init__(self):
 		self.__ligado: bool = False
 		self.__bateria: Bateria | None = none
@@ -24,7 +24,7 @@ Class Notebook:
 			return
 
 
-Class Bateria:
+class Bateria:
     def __init__(self, capacidade: int):
         self.__capacidade: int = capacidade
         self.__carga: int = capacidade
@@ -50,7 +50,7 @@ Class Bateria:
 		return f"Bateria: {self.carga} {self.__capacidade}"
 
 
-Class Carregador:
+class Carregador:
 	def __init__(self, potencia: int):
 		self.__potencia: int = potencia
 

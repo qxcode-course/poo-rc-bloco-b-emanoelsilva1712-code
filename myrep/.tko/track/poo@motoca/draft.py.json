@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-20_21-50-20",
+            "content": "@@ -1,388 +0,0 @@\n-class Moto:%0A    def __init__(self):%0A        self.__potencia = 1%0A        self.__tempo: int = 0%0A        self.__pessoa = str%0A%0Aclass Pessoa:%0A    def __init__(self):%0A        self.__nome = str%0A        self.__age = int%0A        %0A    def getAge(self):%0A        return (age)%0A%0A    def getName(self):%0A        return (nome)%0A%0A    def toString(self):%0A        return (%22self.__nome:self.__age%22)%0A%0A%0A%0A        \n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-10-20_22-09-04",
+            "content": "@@ -120,163 +120,8 @@\n tr%0A%0A\n-    def add_pessoa(self, pessoa):%0A        if self.__pessoa == 1:%0A            return %0A        elif self.__pessoa == 0:%0A            self.__pessoa += 1%0A    %0A%0A\n clas\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-10-20_22-32-10",
+            "content": "@@ -112,68 +112,14 @@\n ssoa\n-: pessoa %7C Nome = Nome #pode ser uma pessoa ou pode ser nulo\n+ = str\n %0A%0A  \n@@ -151,25 +151,9 @@\n ssoa\n-: Pessoa) -%3E bool\n+)\n :%0A  \n@@ -179,15 +179,12 @@\n soa \n-!= none\n+== 1\n :%0A  \n@@ -197,70 +197,24 @@\n     \n-print(%22um pessoa na moto%22)%0A            return True%0A   \n+return %0A\n         \n  sel\n@@ -205,24 +205,28 @@\n rn %0A        \n+elif\n  self.__pess\n@@ -233,138 +233,17 @@\n oa =\n- pessoa%0A            return False%0A%0A    def remov(self) -%3E Pessoa %7C Nome:        #tiro a pessoa da moto%0A        aux = self.__pessoa%0A\n+= 0:%0A    \n     \n@@ -264,121 +264,17 @@\n soa \n++\n = \n-None       #Se for = a nada, ent%C3%A3o retirou%0A        return aux          #retorna o auxiliar, que n%C3%A3o tem ninguem\n+1%0A    \n %0A%0Acl\n@@ -310,19 +310,8 @@\n self\n-, nome: str\n ):%0A \n@@ -331,20 +331,19 @@\n _nome = \n-nome\n+str\n %0A       \n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-10-20_23-23-10",
+            "content": "@@ -883,622 +883,13 @@\n )%0A%0A%0A\n-def main():%0A    moto = Moto()%0A%0A    while Tru:%0A        line = input()%0A        print(%22$%22 + line)%0A        args = line.split(%22 %22)%0A%0A        if args%5B0%5D == %22end%22:%0A            break     %0A%0A        elif args%5B0%5D == %22show%22:%0A            print(moto)   %0A%0A        elif args%5B0%5D == %22enter%22:%0A            nome = args%5B1%5D%0A            pessoa = Pessoa(nome)%0A            moto.inserir(pessoa)%0A%0A        elif args%5B0%5D == %22leave%22:%0A            pessoa = moto.remover()%0A            if pessoa == None:%0A                print(%22ninguem na moto%22)%0A            else:%0A                print(f%22%7Bpessoa%7D saiu%22)%0A        else:%0A            print(%22invalido%22)%0A%0Amain()\n+%0A        \n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-10-20_23-39-21",
+            "content": "@@ -1182,27 +1182,8 @@\n s%5B1%5D\n- # tem as variaveis\n %0A   \n@@ -1216,23 +1216,8 @@\n ome)\n- #tem as pessoa\n %0A   \n@@ -1249,43 +1249,8 @@\n soa)\n- #manda as pessoas entrarem na moto\n %0A%0A  \n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-10-20_23-44-09",
+            "content": "@@ -1113,79 +1113,12 @@\n int(\n-f%22power:%7Bself.__potencia%7D, time:%7Bself.__tempo%7D, person:%7Bself.__pessoa%7D%22\n+moto\n )   \n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-10-21_01-03-47",
+            "content": "class Moto:\n    def __init__(self):\n        self.__potencia = 1\n        self.__tempo: int = 0\n        self.__pessoa: pessoa | Nome = Nome #pode ser uma pessoa ou pode ser nulo\n\n    def add_pessoa(self, pessoa: Pessoa) -> bool:\n        if self.__pessoa != none:\n            print(\"um pessoa na moto\")\n            return True\n            self.__pessoa = pessoa\n            return False\n\n    def remov(self) -> Pessoa | Nome:        #tiro a pessoa da moto\n        aux = self.__pessoa\n        self.__pessoa = None       #Se for = a nada, ent\u00e3o retirou\n        return aux          #retorna o auxiliar, que n\u00e3o tem ninguem\n\nclass Pessoa:\n    def __init__(self, nome: str):\n        self.__nome = nome\n        self.__age = int\n        \n    def getAge(self):\n        return (age)\n\n    def getName(self):\n        return (nome)\n\n    def toString(self):\n        return (\"self.__nome:self.__age\")\n\n\ndef main():\n    moto = Moto()\n\n    while Tru:\n        line = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n\n        if args[0] == \"end\":\n            break     \n\n        elif args[0] == \"show\":\n            print(f\"power:{self.__potencia}, time:{self.__tempo}, person:{self.__pessoa}\")   \n\n        elif args[0] == \"enter\":\n            nome = args[1] # tem as variaveis\n            pessoa = Pessoa(nome) #tem as pessoa\n            moto.inserir(pessoa) #manda as pessoas entrarem na moto\n\n        elif args[0] == \"leave\":\n            pessoa = moto.remover()\n            if pessoa == None:\n                print(\"ninguem na moto\")\n            else:\n                print(f\"{pessoa} saiu\")\n        else:\n            print(\"invalido\")\n\nmain()",
+            "lines": "62"
+        }
+    ]
+}

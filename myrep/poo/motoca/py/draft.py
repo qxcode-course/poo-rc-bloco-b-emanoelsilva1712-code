@@ -1,32 +1,35 @@
 class Pessoa:
-    def __init__(self, nome: str):
+    def __init__(self, nome: str, age: int):
         self.__nome = nome
-        self.__age = int
+        self.__age = age
+
+    def __str__(self):
+        return f"{self.__nome}:{self.__age}"
         
     def getAge(self):
-        return (age)
+        return self.__age
 
     def getName(self):
-        return (nome)
+        return self.__nome
 
-    def toString(self):
-        return ("self.__nome:self.__age")
+    def toString(self) -> str:
+        return f"{self.__nome}:{self.__age}"
 
 
 class Moto:
-    def __init__(self):
-        self.__potencia = 1
+    def __init__(self, potencia: int = 1):
+        self.__potencia = potencia
         self.__tempo: int = 0
-        self.__pessoa: pessoa | Nome = Nome #pode ser uma pessoa ou pode ser nulo
+        self.__pessoa: Pessoa | None = None #pode ser uma pessoa ou pode ser nulo
 
     def add_pessoa(self, pessoa: Pessoa) -> bool:
-        if self.__pessoa != none:
-            print("um pessoa na moto")
+        if self.__pessoa != None:
+            print("fail: busy motorcycle")
             return False
         self.__pessoa = pessoa
         return True
 
-    def remov(self) -> Pessoa | Nome:        #tiro a pessoa da moto
+    def remover(self) -> Pessoa | None:        #tiro a pessoa da moto
         aux = self.__pessoa
         self.__pessoa = None       #Se for = a nada, então retirou
         return aux          #retorna o auxiliar, que não tem ninguem
@@ -34,9 +37,12 @@ class Moto:
     def comprar_tempo(self, tempo: int):
         self.__tempo += tempo
 
-    def dirigir(self, tempo: int) -> bool:
-        if self.__tempo == 0:
-            print("fail: não possui tempo")
+    def dirigir(self, tempo: int):
+        if self.__pessoa is None:
+            print("fail: empty motorcycle")
+
+        elif self.__tempo == 0:
+            print("fail: buy time first")
             return 
 
         elif self.__tempo < tempo:
@@ -44,17 +50,19 @@ class Moto:
             self.__tempo = 0
 
         elif self.__tempo >= tempo:
-            self.__tempo -= tempo
+             self.__tempo -= tempo
 
-    # retorna o som da buzina da moto
-    def buzinar(self) -> str:
-        som: str = "p"
-        #de acordo com a potencia, vou adicionando um 'e' na variavel som
+    def buzinar(self) -> str:            # retorna o som da buzina da moto
+        som: str = "P"                   #de acordo com a potencia, vou adicionando um 'e' na variavel som
         for i in range(self.__potencia): #é assim que se faz o "for"
             som += "e"
         som += "m"
         return som
 
+    def __str__(self):
+        pessoa = "empty" if self.__pessoa is None else str(self.__pessoa)
+        return f"power:{self.__potencia}, time:{self.__tempo}, person:({pessoa})"
+ 
 
 def main():
     moto = Moto()
@@ -71,29 +79,34 @@ def main():
             break     
 
         elif args[0] == "show":
-            print(f"power:{self.__potencia}, time:{self.__tempo}, person:{self.__pessoa}")   
+            print(moto)
 
         elif args[0] == "init":
-            
+            pot = int(args[1])
+            moto = Moto(pot)
 
         elif args[0] == "enter":
             nome = args[1] # tem as variaveis
-            pessoa = Pessoa(nome) #tem as pessoa
-            moto.inserir(pessoa) #manda as pessoas entrarem na moto
+            idade = int(args[2]) #tem as pessoa
+            pessoa = Pessoa(nome, idade) #manda as pessoas entrarem na moto
+            moto.add_pessoa(pessoa)
 
         elif args[0] == "leave":
             pessoa = moto.remover()
             if pessoa == None:
-                print("ninguem na moto")
+                print("fail: empty motorcycle")
             else:
-                print(f"{pessoa} saiu")
+                print(f"{pessoa.toString()}")
         
         elif args[0] == "buy":
-             
+            minuto = int(args[1])
+            moto.comprar_tempo(minuto)
 
         elif args[0] == "drive":
+            tempo = int(args[1])
+            moto.dirigir(tempo)
 
         elif args[0] == "honk":
-
+            print(moto.buzinar())
 
 main()

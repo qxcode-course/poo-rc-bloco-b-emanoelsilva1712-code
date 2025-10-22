@@ -20,7 +20,7 @@ class Moto:
     def __init__(self, potencia: int = 1):
         self.__potencia = potencia
         self.__tempo: int = 0
-        self.__pessoa: Pessoa | None = None #pode ser uma pessoa ou pode ser nulo
+        self.__pessoa: Pessoa = None #pode ser uma pessoa ou pode ser nulo
 
     def add_pessoa(self, pessoa: Pessoa) -> bool:
         if self.__pessoa != None:
@@ -38,12 +38,19 @@ class Moto:
         self.__tempo += tempo
 
     def dirigir(self, tempo: int):
-        if self.__pessoa is None:
+        if self.__tempo == 0:
+            print("fail: buy time first")
+            return 
+
+        elif self.__pessoa == None:
             print("fail: empty motorcycle")
 
         elif self.__tempo == 0:
             print("fail: buy time first")
             return 
+
+        elif self.__pessoa.getAge() > 10:
+            print("fail: too old to drive")
 
         elif self.__tempo < tempo:
             print(f"fail: time finished after {self.__tempo} minutes")

@@ -2,13 +2,17 @@ version: '0.2'
 sources:
 - database: local
   link: ''
+  type: local
+  branch: master
   cache_path: ''
   cache_timestamp: ''
   filters: null
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
+  type: remote
+  branch: master
   cache_path: C:\Users\emano\OneDrive\Área de Trabalho\Nova Pasta\poo-rc-bloco-b-emanoelsilva1712-code\myrep\.tko\cache\poo.md
-  cache_timestamp: '2025-10-28 02:13:30'
+  cache_timestamp: '2025-10-28 10:35:26'
   filters:
   - acesso
   - simples
@@ -17,11 +21,14 @@ expanded:
 - poo@bloco_b-modificadores-de-acesso
 - poo@campanha-principal
 tasks:
-  poo@chinela: '{rate:100, alone:10, study:1}'
-  poo@camisa: '{rate:100, alone:10}'
-  poo@roupa: '{alone:10, study:2}'
-  poo@relogio: '{rate:100, alone:10, study:4}'
-  poo@motoca: '{rate:100, alone:10, study:6}'
+  poo@chinela: '{rate:100, alone:10, study:180}'
+  poo@camisa: '{rate:100, alone:10, study:60}'
+  poo@roupa: '{alone:10, study:120}'
+  poo@relogio: '{rate:100, alone:10, study:180}'
+  poo@motoca: '{rate:100, alone:10, study:360}'
+  poo@grafite: '{rate:100, alone:10, study:180}'
+  poo@motouber: '{rate:100, alone:10, study:120}'
+  poo@charger: '{study:90}'
 flags:
   quests: 0
   tracks: 0
@@ -29,4 +36,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@grafite
+selected: poo@charger

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-27_18-19-28",
+            "content": "class Grafite:\n    def __init__(self):\n        self.__thickness: float    #espessura do grafite\n        self.__hardness: str     #dureza\n        self.__size: int         #tamanho\n\n\nclass Lapizeira:\n    def __init__(self, ponta = str):\n        self.__ponta = None\n\n\n\n    \n    \n\n",
+            "lines": "16"
+        }
+    ]
+}

@@ -7,8 +7,8 @@ sources:
   filters: null
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
-  cache_path: /workspaces/poo-rc-bloco-b-emanoelsilva1712-code/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-22 17:26:58'
+  cache_path: C:\Users\emano\OneDrive\Área de Trabalho\Nova Pasta\poo-rc-bloco-b-emanoelsilva1712-code\myrep\.tko\cache\poo.md
+  cache_timestamp: '2025-10-28 02:13:30'
   filters:
   - acesso
   - simples
